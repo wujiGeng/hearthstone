@@ -501,3 +501,18 @@ text-transform:uppercase;
   height: 600px;
   width:800px;
 }
+
+.deckTitle{
+  height: 100px;
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+
+.listDetail{
+  border-left: 1px solid white; 
+  display: inline-block; 
+  margin-left: -1px; 
+  padding: 0px 0px 0px 3px; 
+  height: 400px
+}
