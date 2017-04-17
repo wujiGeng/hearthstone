@@ -1,0 +1,474 @@
+
+body,div,ul,li,a{padding:0; margin:0; list-style-type:none;}
+
+
+/**********************  for main view  **************************/
+  
+/*.firstContainer{ 
+  background-image: url("http://i.imgur.com/0h5hoUL.png");
+    background-size:1400px;
+    max-width:1400px;
+    width:1400px;
+    width:expression_r(document.body.clientWidth>1400?"1400":"auto");
+    overflow:hidden;
+
+    background-repeat:no-repeat;
+    margin-bottom: 0;
+    height: 650px;
+
+}*/
+
+
+
+/*顶！d=====(￣▽￣*)b栏的样式*/
+#topBar{ 
+  background-color: white;
+  background-size: 100%;
+  margin-bottom: 0;
+  height: 50px;
+  opacity:0.7;
+
+}
+.topBar{
+
+}
+
+
+.bottomBar{ 
+  background-color: black;
+  background-size: 100%;
+  margin-bottom: 0;
+  height: 30px;
+  opacity:0.9;
+
+}
+
+
+
+li.topBar  a:link,a:visited
+{
+display:block;
+font-weight:bold;
+color:black;
+background-color:transparent;
+width:120px;
+text-align:center;
+padding:6px;
+text-decoration:none;
+text-transform:uppercase;
+}
+li.topBar  a:hover,a:active
+{
+  color:white;
+background-color:black;
+text-decoration:none;
+text-transform:uppercase;
+}
+
+
+/*sideBar侧边栏的样式*/
+#sideBar{ 
+  display:block;
+  width:150px;
+  background-color: #4A4A4A;
+  background-size: 100%;
+  margin-bottom: 0;
+  height: 570px;
+
+}
+
+
+#sideBar li a:link,a:visited
+{
+display:block;
+font-weight:bold;
+color:white;
+background-color:transparent;
+width:135px;
+
+text-align:center;
+padding: 40px 10px 40px 0px;
+text-decoration:none;
+text-transform:uppercase;
+}
+#sideBar li a:hover,a:active
+{
+  color:white;
+background-color:#FFCD38;
+text-decoration:none;
+text-transform:uppercase;
+}
+
+
+
+#sideBar li span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#sideBar li span:after {
+  content: '>>';
+  position: absolute;
+  opacity: 0;
+  top: 20px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#sideBar li a:hover span {
+  padding-right: 25px;
+}
+
+#sideBar li a:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/*sideBar二级菜单的样式*/
+
+
+.classBarText{
+
+  color:white;
+}
+
+
+.classBarBack{ 
+
+  width:120px;
+  background-color: grey;
+  background-size: 100%;
+  margin-bottom: 0;
+  height: 570px;
+
+}
+
+
+
+.classBarBack li a:hover,a:active
+{
+  color:black;
+  width:105px;
+
+  
+background-color:#FFCD38;
+text-decoration:none;
+text-transform:uppercase;
+
+
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+
+  opacity: 1;
+  top: 8px;
+
+  transition: 0.5s;
+}
+
+
+
+
+
+/*cardlist卡牌组的样式*/
+
+
+  ::-webkit-scrollbar {
+      width: 15px;
+  } /* 这是针对缺省样式 (必须的) */
+
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  } /* 滚动条的滑轨背景颜色 */
+
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: white; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+  }  /*滑块颜色*/ 
+
+  ::-webkit-scrollbar-button {
+      background-color: transparent;
+  } /* 滑轨两头的监听按钮颜色 */
+
+ 
+
+  ::-webkit-scrollbar-corner {
+      background-color: transparent;
+  }/* 横向滚动条和纵向滚动条相交处尖角的颜色 */
+
+
+#cardWaitingList{ 
+  display:block;
+  width:255px;
+  background-color: #4A4A4A;
+  background-size: 100%;
+  margin-bottom: 0;
+  height: 570px;
+  opacity: 0.9;
+
+
+}
+
+.cardList{
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.listDetail{
+  height:360px;
+  background-color:#4A4A4A;
+  margin: 0px;
+  padding: 0px;
+
+  overflow: scroll;
+  overflow-x: hidden;
+
+
+}
+
+
+
+.heroName{
+  height:70px;
+
+  background-image: url(http://www.hearthstonetopdecks.com/wp-content/uploads/2016/08/featured-firelandsportal.jpg);
+  background-size:230px;
+  color:white;
+  padding-left:30px;
+  position: center;
+  
+
+}
+
+.curveText{
+   -webkit-text-size-adjust:none; font-size:6px; 
+   width:2px;
+   height:140px;
+
+   color:white;
+   margin-right: 10px;
+   margin-top: 4px;
+  padding: 0px;
+}
+
+.curveGraph{
+    height:140px;
+
+    margin: 0px;
+  padding: 0px;
+
+}
+
+.progress{
+  height: 13px;
+    margin: 4px;
+  padding: 0px;
+  color:#F66E00;
+}
+
+
+
+.searchFuntion{
+  width: 1130px;
+  height:50px;
+  margin:0px;
+  padding-top:8px; 
+  background-color: #4A4A4A;
+  opacity: 0.9; 
+  z-index: 100;
+}
+.placeholder{
+  color:black;
+}
+.form-control{
+  background-color: white;
+  opacity: 0.7;
+}
+
+.filterButton{
+  height: 50px;
+  width: 110px;
+  margin: 0px;
+  padding-left: 20px;
+}
+
+
+.cardView{
+  margin: 0px;
+  padding: 0px;
+  width: 1130px;
+  height: 520px
+}
+
+.cardImagediv{
+  margin: 0px;
+  padding: 0px;
+  height:260px;
+  width: 182px;
+
+
+}
+.turnpage{
+  margin: 0px;
+  padding: 0px;
+  width: 60px;
+  height: 520px
+}
+
+.turnButton{
+  transform:rotate(180deg);
+  margin-top: 220px;
+
+  padding: 5px;
+  width: 100%;
+  height: 100px;
+
+}
+
+.turnButton1{
+  margin-top: 220px;
+  margin-bottom: : 450px;
+  padding: 5px;
+  width: 100%;
+  height: 100px;
+
+}
+
+.cardImage{
+  margin: 0px;
+  padding: 0px;
+  height:100%;
+  width: 100%;
+  background-color: transparent;
+}
+
+
+
+/*图片悬停动画*/
+
+.caption-style-2{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    
+  }
+  .caption-style-2 li{
+    float: left;
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+  }
+  .caption-style-2 li:hover .caption{
+    opacity: 1;
+    transform: translateY(-100px);
+    -webkit-transform:translateY(-100px);
+    -moz-transform:translateY(-100px);
+    -ms-transform:translateY(-100px);
+    -o-transform:translateY(-100px);
+  }
+  .caption-style-2 img{
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    z-index: 4;
+  }
+  .caption-style-2 .caption{
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    top:300px;
+    -webkit-transition:all 0.15s ease-in-out;
+    -moz-transition:all 0.15s ease-in-out;
+    -o-transition:all 0.15s ease-in-out;
+    -ms-transition:all 0.15s ease-in-out;
+    transition:all 0.15s ease-in-out;
+  }
+  .caption-style-2 .blur{
+    background-color: rgba(0,0,0,0.7);
+    height: 50px;
+    width: 182px;
+    z-index: 5;
+    position: absolute;
+  }
+
+.deleteButton{
+  cursor: pointer;
+}
+.detailButton{
+
+  opacity: 0.7;
+  margin-left: 0px;
+  padding: 0px;
+  background-color: transparent;
+  height: 50px;
+  width: 91px;
+
+}
+
+
+/*li.detailButton a:link,a:visited
+{
+  color:white;
+background-color:transparent;
+text-decoration:none;
+text-transform:uppercase;
+
+}
+
+li.detailButton a:hover,a:active
+{
+display:block;
+font-weight:bold;
+color:white;
+background-color:transparent;
+width:90px;
+text-align:center;
+padding:0px;
+text-decoration:none;
+text-transform:uppercase;
+
+
+}*/
+
+  
+      .closeDetail{
+        position: absolute;
+        cursor: pointer;
+        left:500px;
+      }
+      #check{
+        display: none;
+      }
+      .modal-cover{
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: black;
+        opacity: 0.9;
+        z-index: 101;
+        
+      }
+
+/*      .modal{
+
+        position: absolute;
+        
+        margin-top: 10%;
+        left: 50%;
+        margin-left: -200px;
+        background: #fff;
+        border:1px solid #ddd;
+
+      }*/
+      #check:checked + .modal-cover{
+        display: block;
+      }
