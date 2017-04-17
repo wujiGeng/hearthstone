@@ -1,5 +1,5 @@
 
-var hearthStoneApp = angular.module('hearthStone', ['ngRoute','ngResource']);
+var hearthStoneApp = angular.module('hearthStone', ['ngRoute','ngResource','ngDragDrop']);
 
 hearthStoneApp.config(['$routeProvider',
   function($routeProvider) {
