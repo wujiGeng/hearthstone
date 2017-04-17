@@ -16,7 +16,7 @@
 
         <ul class="nav nav-pills nav-stacked">
 
-          <li ><a href="" ng-click="functionChoose('Class');classSearch('Neutral')"><span><h3>Class</h3></span></a></li>
+          <li ><a href="" ng-click="functionChoose('Class')"><span><h3>Class</h3></span></a></li>
           <li ><a href="" ng-click="functionChoose('Type')"><span><h3>Type</h3></span></a></li>
           <li ><a href="" ng-click="functionChoose('Quality')"><span><h3>Quality</h3></span></a></li>
           <li ><a href="" ng-click="functionChoose('Race')"><span><h3>Race</h3></a></span></li>
@@ -194,7 +194,7 @@
         <div class="caption">
           <div class="blur">
             <button class="col-md-6 btn btn-sm detailButton" ng-click="showDetail(card.cardId)" ><h4 style="color:white"><label class="btn" for="check">Detail</label></h4></button>
-            <button class="col-md-6 detailButton btn btn-sm" ng-click=""><h4 style="color:white">Favorite</h4></button>
+            <button class="col-md-6 detailButton btn btn-sm" ng-click="addToCollection(card)"><h4 style="color:white">Favorite</h4></button>
           </div>
 
         </div>

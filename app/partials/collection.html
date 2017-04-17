@@ -2,11 +2,42 @@
 
 <!-- save and view the favorite cards -->
 
+<div class = "Background">
+
+
+<!-- input and search block -->
+<link href="css/styles.css" rel="stylesheet">
+<link href="css/clear.css" rel="stylesheet">
+
 <!-- top bar -->
 <ng-include src="'partials/topbar.html'" ng-controller="MainCtrl"></ng-include>
 
-<!-- colection title -->
+<!-- colection title 【这句话看不见了！！！！】 -->
+<div>My Collections</div>
 <div></div>
 
 <!-- colected card detail (picture) -->
-<div></div>
+<div>
+      <div class="col-md-8 cardView">
+      <div class="col-md-1 turnpage"><img class="turnButton"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Media_Viewer_Icon_-_Next.svg/1000px-Media_Viewer_Icon_-_Next.svg.png" ng-click="last10cards()"></img></div>
+
+      <div class="col-md-10">
+      <ul class="caption-style-2" ng-repeat="card in showingCards track by $index|limitTo:10">
+         <li>
+        <div class="col-md-3 cardImagediv">
+        <img ng-drag="true" ng-drag-data="card.cardId" class="cardImage" ng-src="{{card.img}}">
+        </div>
+
+      </li>
+
+    </ul>
+    </div>
+
+      <div class="col-md-1 turnpage"><img class="turnButton1"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Media_Viewer_Icon_-_Next.svg/1000px-Media_Viewer_Icon_-_Next.svg.png" ng-click="next10cards()"></img></div>
+    </div>
+</div>
+
+<!-- delete bin -->
+<div ng-drop="true" ng-drop-success="deleteFromCollection($data)">
+	<img style="width: 100px; height: 100px" src="http://img3.imgtn.bdimg.com/it/u=1496813777,1882048858&fm=23&gp=0.jpg">
+</div>
