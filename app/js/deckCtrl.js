@@ -116,6 +116,13 @@ $scope.costFilter = function(cost,cards) {
         Hearthstone.AddCardToDeck(card);
         Hearthstone.SortCards();
         Hearthstone.SetProgress();
+        
+        $scope.progressFlag=($scope.progressFlag+1)%2;
+        Hearthstone.ShowProgress($scope.progressFlag);
+
+        $scope.progressBars = Hearthstone.GetProgress();
+/*        $scope.progressFlag=Hearthstone.ShowProgress(1);*/
+        console.log($scope.progressBars);  
       //  $scope.progressBars = Hearthstone.GetProgress();
  }
 
@@ -123,12 +130,15 @@ $scope.costFilter = function(cost,cards) {
 
      Hearthstone.DeleteCardFromDeck(cardId);
      Hearthstone.SetProgress();
+     $scope.progressBars = Hearthstone.GetProgress();
+     $scope.progressFlag=($scope.progressFlag+1)%2;
+     Hearthstone.ShowProgress($scope.progressFlag);
     // $scope.progressBars = Hearthstone.GetProgress();
     }
 
   $scope.selectedCards = Hearthstone.GetDeck();
     
-  $scope.progressBars = Hearthstone.GetProgress();
+
 
   
 
