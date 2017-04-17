@@ -1,0 +1,120 @@
+
+<!-- This is where the search page located. -->
+
+<!-- top bar -->
+<div class = "Background">
+
+
+<!-- input and search block -->
+<link href="css/styles.css" rel="stylesheet">
+<link href="css/clear.css" rel="stylesheet">
+  
+  <ng-include src="'partials/topbar.html'"></ng-include>
+  <ng-include class="floatBar" src="'partials/deckbar.html'"></ng-include>
+
+
+
+
+  <div class="col-md-8 searchFuntion">
+          <div class="col-md-6">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for..." ng-model="name"/>
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button" ng-click="search(name)">Search</button>
+                </span>
+            </div><!-- /input-group -->
+          </div><!-- /.col-lg-6 -->
+
+
+          <div class="col-md-1 filterButton btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cost<span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a ng-click="Select(0,attack,health)">0</a></li>
+                <li><a ng-click="Select(1,attack,health)">1</a></li>
+                <li><a ng-click="Select(2,attack,health)">2</a></li>
+                <li><a ng-click="Select(3,attack,health)">3</a></li>
+                <li><a ng-click="Select(4,attack,health)">4</a></li>
+                <li><a ng-click="Select(5,attack,health)">5</a></li>
+                <li><a ng-click="Select(6,attack,health)">6</a></li>
+                <li><a ng-click="Select(7,attack,health)">7+</a></li>
+              </ul>
+            </div>
+
+
+          <div class="col-md-1 filterButton btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Attack <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a ng-click="Select(cost,0,health)">0</a></li>
+                <li><a ng-click="Select(cost,1,health)">1</a></li>
+                <li><a ng-click="Select(cost,2,health)">2</a></li>
+                <li><a ng-click="Select(cost,3,health)">3</a></li>
+                <li><a ng-click="Select(cost,4,health)">4</a></li>
+                <li><a ng-click="Select(cost,5,health)">5</a></li>
+                <li><a ng-click="Select(cost,6,health)">6</a></li>
+                <li><a ng-click="Select(cost,7,health)">7+</a></li>
+
+              </ul>
+
+        </div>
+
+          <div class="col-md-1 filterButton btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Health<span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a ng-click="Select(cost,attack,0)">0</a></li>
+                <li><a ng-click="Select(cost,attack,1)">1</a></li>
+                <li><a ng-click="Select(cost,attack,2)">2</a></li>
+                <li><a ng-click="Select(cost,attack,3)">3</a></li>
+                <li><a ng-click="Select(cost,attack,4)">4</a></li>
+                <li><a ng-click="Select(cost,attack,5)">5</a></li>
+                <li><a ng-click="Select(cost,attack,6)">6</a></li>
+                <li><a ng-click="Select(cost,attack,7)">7+</a></li>
+              </ul>
+
+        </div>
+
+          <div class="col-md-1 filterButton btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Durability <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7+</a></li>
+              </ul>
+        </div>
+
+      </div>
+
+<div >
+
+
+
+    <div class="col-md-8 cardView">
+
+      <div class="col-md-1 turnpage"><img class="turnButton"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Media_Viewer_Icon_-_Next.svg/1000px-Media_Viewer_Icon_-_Next.svg.png" ng-click="last10cards()"></img></div>
+
+      <div class="col-md-10">
+      
+      <ul class="caption-style-2" ng-repeat="card in showingCards track by $index|limitTo:10">
+         <li>
+        <div class="col-md-3 cardImagediv">
+
+        <img class="cardImage" ng-src="{{card.img}}" ng-click="selectCard(card)">
+        
+        </div>
+
+      </li>
+    </ul>
+    </div>
+
+      <div class="col-md-1 turnpage"><img class="turnButton1"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Media_Viewer_Icon_-_Next.svg/1000px-Media_Viewer_Icon_-_Next.svg.png" ng-click="next10cards()"></img></div>
+    </div>
+</div>
+
+</div>
