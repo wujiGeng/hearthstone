@@ -9,7 +9,7 @@ var shownCards = [];
 $scope.showingCards = [];
 
 
-var page = 0;
+var page = 1;
 
 
   $scope.functionChoose = function(type){
@@ -94,7 +94,7 @@ var page = 0;
     }; 
     console.log(page);
        console.log($scope.showingCards);
-       if(page*10>=shownCards.length){page=parseInt(shownCards.length/10)};
+       if(page*10>=shownCards.length){page=parseInt(shownCards.length/10+1)};
  }
 
  $scope.costFilter = function(cost,cards) {
