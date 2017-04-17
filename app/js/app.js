@@ -25,7 +25,7 @@ hearthStoneApp.config(['$routeProvider',
       }).      
       when('/deckOverview', {
         templateUrl: 'partials/deckOverview.html',
-      //  controller: 'CardCtrl'
+        controller: 'DeckCtrl'
       }).
       when('/collection', {
         templateUrl: 'partials/collection.html',
