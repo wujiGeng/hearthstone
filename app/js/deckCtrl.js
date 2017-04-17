@@ -139,6 +139,7 @@ $scope.costFilter = function(cost,cards) {
     }
 
   $scope.selectedCards = Hearthstone.GetDeck();
+  $scope.progressBars = Hearthstone.GetProgress();
     
 
 
