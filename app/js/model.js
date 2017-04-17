@@ -264,6 +264,8 @@ this.SetHero = function(type){
       } 
     //  this.SetProgress();   
  }
+ 
+ 
 
  this.DeleteCardFromDeck = function(id){
   for(var i=0; i<myDeck.length; i++){
@@ -274,6 +276,11 @@ this.SetHero = function(type){
             }
         }
    //     this.SetProgress();
+ }
+ 
+  this.ShowProgress= function(flag){
+  console.log(flag);
+  return flag;
  }
 
  this.GetDeck = function() {
