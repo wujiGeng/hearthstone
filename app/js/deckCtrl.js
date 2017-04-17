@@ -18,7 +18,7 @@ $scope.progressBar = [];
 
 $scope.heroType = "";
 
-var page = 0;
+var page = 1;
 
   //get cards of selected class and neutural class
 $scope.classCards = function(){
@@ -67,7 +67,7 @@ $scope.classCards = function(){
     }; 
     console.log(page);
        console.log($scope.showingCards);
-       if(page*10>=shownCards.length){page=parseInt(shownCards.length/10)};
+       if(page*10>=shownCards.length){page=parseInt(shownCards.length/10+1)};
     return $scope.showingCards;  
 
  }
