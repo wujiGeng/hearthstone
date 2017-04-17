@@ -8,7 +8,11 @@
   		<div class="col-md-1 detailBlock"></div>
   		<div class="col-md-9 blackBack">
   			<div class="col-md-4 heroProgress">
-  				<div class="heroPicInO"><img src="{{getHeroPic()}}"></div>
+          <div style="height:360px;padding-left:20px;">
+  				  <div class="heroPicInO">
+              <img src="{{getHeroPic()}}">
+            </div>
+          </div>
   				<div class="progressbarInO">
   				<div class="col-md-1 curveText">0 1 2 3 4 5 6 7+</div>
 			        <div class="col-md-10 curveGraph">
@@ -23,17 +27,30 @@
         		</div>
   				</div>
   			<div class="col-md-8 cardlist">
-  				<div class="detailList" ng-repeat="card in selectedCards track by $index">
+          <div><h1 class="col-md-12 deckTitle">Deck Detail</h1></div>
+            
+            <div class="col-md-6 listDetail">
+  				    <div class="detailList" ng-repeat="card in selectedCards track by $index|limitTo:15">
 		            <div class="col-md-12" >
-		            <div class="cardList" ng-click="cardDetail(card.cardId)">
 		              <div class="col-md-1" style="margin: 0px;padding: 0px;color: white">{{card.cost}}</div>
 		              <div class="col-md-10" ><span style="color:white">{{card.name}}</span></div>
 		              <div class="col-md-1 deleteButton" style="margin: 0px;padding: 0px;color: white"><span ng-click="removeFromList(card.cardId)">x</span></div>
 		            </div>
-
-		          </div>
-		            
+		          </div>   
 		        </div>
+
+            <div class="col-md-6 listDetail">
+              <div class="detailList" ng-repeat="card in selectedCards track by $index|limitTo:15:15">
+                <div class="col-md-12" >
+                  <div class="col-md-1" style="margin: 0px;padding: 0px;color: white">{{card.cost}}</div>
+                  <div class="col-md-10" ><span style="color:white">{{card.name}}</span></div>
+                  <div class="col-md-1 deleteButton" style="margin: 0px;padding: 0px;color: white"><span ng-click="removeFromList(card.cardId)">x</span></div>
+                </div>
+              </div>
+              </div>
+            </div>
+
+
   			</div>
   		</div>
 
