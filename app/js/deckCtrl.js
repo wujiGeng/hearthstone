@@ -143,7 +143,12 @@ $scope.costFilter = function(cost,cards) {
     
 
 
-  
+    $scope.getHeroPic = function(){
+    var heroTypePic = "";
+    heroTypePic = Hearthstone.GetHeroPic($scope.heroType);
+    return heroTypePic;
+    console.log(heroTypePic);
+  }
 
 
 
