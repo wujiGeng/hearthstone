@@ -233,6 +233,41 @@ this.SetHero = function(type){
  this.GetHero = function(){
     return heroType;
  }
+ 
+ this.GetHeroPic=function(){
+  var link = "";
+
+    if(heroType=='Warrior'){
+      link = "http://media.services.zam.com/v1/media/byName/hs/cards/enus/HERO_01.png"
+    }
+    if(heroType=='Shaman'){
+      link = "http://media.services.zam.com/v1/media/byName/hs/cards/enus/HERO_02.png"
+    }
+    if(heroType=='Rogue'){
+      link = "http://media.services.zam.com/v1/media/byName/hs/cards/enus/HERO_03.png"
+    }
+    if(heroType=='Paladin'){
+      link = "http://media.services.zam.com/v1/media/byName/hs/cards/enus/HERO_04.png"
+    }
+    if(heroType=='Hunter'){
+      link = "http://media.services.zam.com/v1/media/byName/hs/cards/enus/HERO_05.png"
+    }
+    if(heroType=='Druid'){
+      link = "http://media.services.zam.com/v1/media/byName/hs/cards/enus/HERO_06.png"
+    }
+    if(heroType=='Warlock'){
+      link = "http://media.services.zam.com/v1/media/byName/hs/cards/enus/HERO_07.png"
+    }
+    if(heroType=='Priest'){
+      link = "http://media.services.zam.com/v1/media/byName/hs/cards/enus/HERO_08.png"
+    }
+    if(heroType=='Mage'){
+      link = "http://media.services.zam.com/v1/media/byName/hs/cards/enus/HERO_09.png"
+    }
+    console.log(link);
+    return link;
+    
+ }
 
  this.AddCardToDeck = function(card){
   var cardAlreadyInDeck = false;
