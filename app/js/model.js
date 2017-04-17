@@ -353,7 +353,7 @@ this.SortCards = function(){
       for(var i=0;i<=7;i++){
        // progressBars.push((x[i]/myDeck.length)*60+'%');
       
-        progressBars[i] = ((x[i]/myDeck.length)*60+'%');
+        progressBars[i] = ((x[i]/myDeck.length)*100+'%');
       };
       
         //console.log(progressBars);
