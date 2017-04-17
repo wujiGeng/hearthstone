@@ -16,6 +16,8 @@ $scope.selectedCards = [];
 
 $scope.progressBar = [];
 
+$scope.progressFlag = 0;
+  
 $scope.heroType = "";
 
 var page = 1;
