@@ -117,14 +117,15 @@
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cost<span class="caret"></span>
               </button>
               <ul class="dropdown-menu">
-                <li><a ng-click="Select(0,attack,health)">0</a></li>
-                <li><a ng-click="Select(1,attack,health)">1</a></li>
-                <li><a ng-click="Select(2,attack,health)">2</a></li>
-                <li><a ng-click="Select(3,attack,health)">3</a></li>
-                <li><a ng-click="Select(4,attack,health)">4</a></li>
-                <li><a ng-click="Select(5,attack,health)">5</a></li>
-                <li><a ng-click="Select(6,attack,health)">6</a></li>
-                <li><a ng-click="Select(7,attack,health)">7+</a></li>
+                <li><a ng-click="costFilter(8,savedCards)">All</a></li>
+                <li><a ng-click="costFilter(0,savedCards)">0</a></li>
+                <li><a ng-click="costFilter(1,savedCards)">1</a></li>
+                <li><a ng-click="costFilter(2,savedCards)">2</a></li>
+                <li><a ng-click="costFilter(3,savedCards)">3</a></li>
+                <li><a ng-click="costFilter(4,savedCards)">4</a></li>
+                <li><a ng-click="costFilter(5,savedCards)">5</a></li>
+                <li><a ng-click="costFilter(6,savedCards)">6</a></li>
+                <li><a ng-click="costFilter(7,savedCards)">7+</a></li>
               </ul>
             </div>
 
@@ -133,14 +134,15 @@
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Attack <span class="caret"></span>
               </button>
               <ul class="dropdown-menu">
-                <li><a ng-click="Select(cost,0,health)">0</a></li>
-                <li><a ng-click="Select(cost,1,health)">1</a></li>
-                <li><a ng-click="Select(cost,2,health)">2</a></li>
-                <li><a ng-click="Select(cost,3,health)">3</a></li>
-                <li><a ng-click="Select(cost,4,health)">4</a></li>
-                <li><a ng-click="Select(cost,5,health)">5</a></li>
-                <li><a ng-click="Select(cost,6,health)">6</a></li>
-                <li><a ng-click="Select(cost,7,health)">7+</a></li>
+                <li><a ng-click="attackFilter(8,savedCards)">All</a></li>
+                <li><a ng-click="attackFilter(0,savedCards)">0</a></li>
+                <li><a ng-click="attackFilter(1,savedCards)">1</a></li>
+                <li><a ng-click="attackFilter(2,savedCards)">2</a></li>
+                <li><a ng-click="attackFilter(3,savedCards)">3</a></li>
+                <li><a ng-click="attackFilter(4,savedCards)">4</a></li>
+                <li><a ng-click="attackFilter(5,savedCards)">5</a></li>
+                <li><a ng-click="attackFilter(6,savedCards)">6</a></li>
+                <li><a ng-click="attackFilter(7,savedCards)">7+</a></li>
 
               </ul>
 
@@ -150,14 +152,15 @@
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Health<span class="caret"></span>
               </button>
               <ul class="dropdown-menu">
-                <li><a ng-click="Select(cost,attack,0)">0</a></li>
-                <li><a ng-click="Select(cost,attack,1)">1</a></li>
-                <li><a ng-click="Select(cost,attack,2)">2</a></li>
-                <li><a ng-click="Select(cost,attack,3)">3</a></li>
-                <li><a ng-click="Select(cost,attack,4)">4</a></li>
-                <li><a ng-click="Select(cost,attack,5)">5</a></li>
-                <li><a ng-click="Select(cost,attack,6)">6</a></li>
-                <li><a ng-click="Select(cost,attack,7)">7+</a></li>
+                <li><a ng-click="healthFilter(8,savedCards)">All</a></li>
+                <li><a ng-click="healthFilter(0,savedCards)">0</a></li>
+                <li><a ng-click="healthFilter(1,savedCards)">1</a></li>
+                <li><a ng-click="healthFilter(2,savedCards)">2</a></li>
+                <li><a ng-click="healthFilter(3,savedCards)">3</a></li>
+                <li><a ng-click="healthFilter(4,savedCards)">4</a></li>
+                <li><a ng-click="healthFilter(5,savedCards)">5</a></li>
+                <li><a ng-click="healthFilter(6,savedCards)">6</a></li>
+                <li><a ng-click="healthFilter(7,savedCards)">7+</a></li>
               </ul>
 
         </div>
@@ -166,13 +169,15 @@
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Durability <span class="caret"></span>
               </button>
               <ul class="dropdown-menu">
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">6</a></li>
-                <li><a href="#">7+</a></li>
+                <li><a ng-click="durabilityFilter(8,savedCards)">All</a></li>
+                <li><a ng-click="durabilityFilter(0,savedCards)">0</a></li>
+                <li><a ng-click="durabilityFilter(1,savedCards)">1</a></li>
+                <li><a ng-click="durabilityFilter(2,savedCards)">2</a></li>
+                <li><a ng-click="durabilityFilter(3,savedCards)">3</a></li>
+                <li><a ng-click="durabilityFilter(4,savedCards)">4</a></li>
+                <li><a ng-click="durabilityFilter(5,savedCards)">5</a></li>
+                <li><a ng-click="durabilityFilter(6,savedCards)">6</a></li>
+                <li><a ng-click="durabilityFilter(7,savedCards)">7+</a></li>
               </ul>
         </div>
 
