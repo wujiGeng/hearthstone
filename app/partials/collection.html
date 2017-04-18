@@ -24,7 +24,7 @@
       <div class="col-md-10">
       <ul class="caption-style-2" ng-repeat="card in showingCards track by $index|limitTo:10">
          <li>
-        <div class="col-md-3 cardImagediv">
+        <div class="col-md-3 cardImagediv" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" jqyoui-draggable="{animate:true}">
         <img ng-drag="true" ng-drag-data="card.cardId" class="cardImage" ng-src="{{card.img}}">
         </div>
 
