@@ -223,6 +223,31 @@ var progressBars = [];
   return resultCards;
 }
 
+//turn pages
+ this.PageDown = function(page,s){
+    page=page-1; 
+    if(page<=0){page=1}
+    var showingCards =[];
+    var shownCards = s;
+    for(var j=page*10-10;j<page*10;j++){
+      showingCards.push(shownCards[j])
+    };
+    return showingCards;
+ }
+
+ this.PageUp = function(page,s){
+    page=page+1;
+    var showingCards =[];
+    var shownCards = s;
+    for(var j=(page-1)*10;j<page*10;j++){
+      showingCards.push(shownCards[j])
+    }; 
+       if(page*10>=shownCards.length){page=parseInt(shownCards.length/10+1)};
+       return showingCards;
+ }
+
+
+
  //about card deck
  //set hero type for deck function
 this.SetHero = function(type){

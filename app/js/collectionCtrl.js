@@ -13,29 +13,29 @@ collectionCards = Hearthstone.GetCollection();
 $scope.showingCards = collectionCards;
 console.log(collectionCards);
 
-$scope.last10cards = function(){
-    page=page-1; 
-    if(page<=0){page=1}
-    
-    $scope.showingCards =[];
-    for(var j=page*10-10;j<page*10;j++){
-      $scope.showingCards.push(collectionCards[j])
-    };
-    console.log($scope.showingCards);
-    
+//to hide the dragging card from its original place
+$scope.startCallback = function (event, ui) {
+  var $draggable = $(event.target);
+  ui.helper.width($draggable.width());
+  ui.helper.height($draggable.height());
+  $draggable.css('opacity', '0');
+};
+
+ $scope.last10cards = function(){
+    var p = page;
+    var s = shownCards;
+    $scope.showingCards = Hearthstone.PageDown(p,s);
+    if(page<=1){page=1}
+      else {page = page-1;}
  }
 
   $scope.next10cards = function(){
-    console.log(collectionCards);
 
-    page=page+1;
-    $scope.showingCards =[];
-    for(var j=page*10-10;j<page*10;j++){
-      $scope.showingCards.push(collectionCards[j])
-    }; 
-     // console.log(page);
-     //  console.log($scope.showingCards);
-       if(page*10>=collectionCards.length){page=parseInt(collectionCards.length/10+1)};
+    var p = page;
+    var s = shownCards;
+    $scope.showingCards = Hearthstone.PageUp(p,s);
+    if(page*10>=shownCards.length){page=parseInt(shownCards.length/10+1)}
+      else{page = page+1;}
  }
 
  $scope.deleteFromCollection = function(id){

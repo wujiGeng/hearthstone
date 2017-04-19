@@ -7,7 +7,8 @@ $scope.savedCards = [];
 var shownCards = [];
 
 $scope.showingCards = [];
-$scope.loadingFlag = 1;
+
+$scope.loadingFlag=1;
 
 
 var page = 1;
@@ -24,89 +25,89 @@ var page = 1;
  }
   
   $scope.search = function(name) {
-    $scope.loadingFlag=0;
-    console.log($scope.loadingFlag);
+  $scope.loadingFlag=0;
     Hearthstone.CardSearch.query({name:name},function(data){    
     rawCards = data;
     shownCards = Hearthstone.Filter(rawCards); 
     $scope.savedCards = shownCards;
     $scope.showingCards = shownCards;
     $scope.loadingFlag=1;
-    console.log($scope.loadingFlag);
+
    });
  }
  
  $scope.classSearch = function(classes){
-  $scope.loadingFlag=0;
+$scope.loadingFlag=0;
+
   Hearthstone.CardClass.query({class:classes},function(data) {
     rawCards = data;
-
+    //console.log(rawCards);
+    //$scope.filter(rawCards); 
     shownCards = Hearthstone.Filter(rawCards); 
     $scope.savedCards = shownCards;
     $scope.showingCards = shownCards;
     console.log(shownCards);
-    $scope.loadingFlag=1;
+$scope.loadingFlag=1;
+
 /*    console.log($scope.showingCards);*/
 
   });
  }
   
  $scope.qualitySearch = function(quality){
-  $scope.loadingFlag=0;
+$scope.loadingFlag=0;
+
   Hearthstone.CardQuality.query({quality:quality},function(data) {
     rawCards = data;
     shownCards = Hearthstone.Filter(rawCards); 
     $scope.savedCards = shownCards;
     $scope.showingCards = shownCards;
-    $scope.loadingFlag=1;
+$scope.loadingFlag=1;
+
   });
  }
 
  $scope.raceSearch = function(race){
   $scope.loadingFlag=0;
+
   Hearthstone.CardRace.query({race:race},function(data) {
     rawCards = data;
     shownCards = Hearthstone.Filter(rawCards); 
     $scope.savedCards = shownCards;
     $scope.showingCards = shownCards;
     $scope.loadingFlag=1;
+
   });
  }
 
  $scope.typeSearch = function(type){
-  $scope.loadingFlag=0;
+$scope.loadingFlag=0;
+
   Hearthstone.CardType.query({type:type},function(data) {
     rawCards = data;
     shownCards = Hearthstone.Filter(rawCards); 
     $scope.savedCards = shownCards;
     $scope.showingCards = shownCards;
-    $scope.loadingFlag=1;
+$scope.loadingFlag=1;
+    
   });
  }
    
-
  $scope.last10cards = function(){
-    page=page-1; 
-    if(page<=0){page=1}
-      else{
-    $scope.showingCards =[];
-    for(var j=page*10-10;j<page*10;j++){
-      $scope.showingCards.push(shownCards[j])
-    };
-    } 
+    var p = page;
+    var s = shownCards;
+    $scope.showingCards = Hearthstone.PageDown(p,s);
+    if(page<=1){page=1}
+      else {page = page-1;}
  }
 
   $scope.next10cards = function(){
-    console.log(shownCards);
 
-    page=page+1;
-    $scope.showingCards =[];
-    for(var j=(page-1)*10;j<page*10;j++){
-      $scope.showingCards.push(shownCards[j])
-    }; 
-    console.log(page);
-       console.log($scope.showingCards);
-       if(page*10>=shownCards.length){page=parseInt(shownCards.length/10+1)};
+    var p = page;
+    var s = shownCards;
+    $scope.showingCards = Hearthstone.PageUp(p,s);
+    if(page*10>=shownCards.length){page=parseInt(shownCards.length/10+1)}
+      else{page = page+1;}
  }
 
  $scope.costFilter = function(cost,cards) {

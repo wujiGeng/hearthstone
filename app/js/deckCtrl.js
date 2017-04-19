@@ -21,18 +21,16 @@ $scope.progressFlag = 0;
 $scope.heroType = "";
 
 var page = 1;
-
-$scope.selectedCardList1=[];
-$scope.selectedCardList2=[];
-
 $scope.loadingFlag=0;
+
 
   //get cards of selected class and neutural class
 $scope.classCards = function(){
+$scope.loadingFlag=0;
+
    var classes = Hearthstone.GetHero();
    $scope.heroType = classes;
    //get cards from selected class
-   $scope.loadingFlag=0;
    Hearthstone.CardClass.query({class:classes},function(data) {
     rawCards = data;
     // //get cards from neutral cards
@@ -45,7 +43,8 @@ $scope.classCards = function(){
     $scope.savedCards = shownCards;
     $scope.showingCards = shownCards;
     console.log(shownCards);
-    $scope.loadingFlag=1;
+$scope.loadingFlag=1;
+
 
     // });
    });
@@ -54,31 +53,21 @@ $scope.classCards = function(){
  $scope.classCards();
 
 
-
  $scope.last10cards = function(){
-    page=page-1; 
-    if(page<=0){page=1};
-    $scope.showingCards =[];
-    for(var j=page*10-10;j<page*10;j++){
-      $scope.showingCards.push(shownCards[j])
-    };
-    return $scope.showingCards;  
-
+    var p = page;
+    var s = shownCards;
+    $scope.showingCards = Hearthstone.PageDown(p,s);
+    if(page<=1){page=1}
+      else {page = page-1;}
  }
 
   $scope.next10cards = function(){
-    console.log(shownCards);
 
-    page=page+1;
-    $scope.showingCards =[];
-    for(var j=(page-1)*10;j<page*10;j++){
-      $scope.showingCards.push(shownCards[j])
-    }; 
-    console.log(page);
-       console.log($scope.showingCards);
-       if(page*10>=shownCards.length){page=parseInt(shownCards.length/10+1)};
-    return $scope.showingCards;  
-
+    var p = page;
+    var s = shownCards;
+    $scope.showingCards = Hearthstone.PageUp(p,s);
+    if(page*10>=shownCards.length){page=parseInt(shownCards.length/10+1)}
+      else{page = page+1;}
  }
 
 //card filters
@@ -155,8 +144,8 @@ $scope.costFilter = function(cost,cards) {
     heroTypePic = Hearthstone.GetHeroPic($scope.heroType);
     return heroTypePic;
     console.log(heroTypePic);
-
   }
+
 
 
 
