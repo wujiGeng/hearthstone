@@ -5,7 +5,7 @@ This is a website designed for hearthstone users, helping them to check all the 
 
 # Visit our site
 
-To visit our site, please go to the link --> 
+To visit our site, please go to the link --> https://blooming-reef-90213.herokuapp.com/
 
 If the link is not working, please download the project, and do the following steps in your command line:
 
