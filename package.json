@@ -15,7 +15,7 @@
   "scripts": {
     "postinstall": "./node_modules/bower/bin/bower install",
     "prestart": "npm install",
-    "start": "node ./app/index.js"
+    "start": "node ./app/server.js"
   },
   "dependencies": {
     "bower": "^1.8.x",
@@ -28,6 +28,6 @@
     "url": "https://github.com/wujiGeng/hearthstone/issues"
   },
   "homepage": "https://github.com/wujiGeng/hearthstone#readme",
-  "main": "index.js",
+  "main": "./app/server.js",
   "author": ""
 }
