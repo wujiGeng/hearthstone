@@ -1,0 +1,22 @@
+{
+  "name": "hearthstone-cards",
+  "description": "A project for dynamic web",
+  "version": "0.0.0",
+  "homepage": "https://github.com/wujiGeng/hearthstone",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.6.x",
+    "angular-mocks": "1.6.x",
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.x",
+    "angular-route": "1.6.x",
+    "angular-resource": "1.6.x",
+    "angular-animate": "1.6.x",
+    "angular-cookies": "1.6.x",
+    "angular-dragdrop":"1.0.13"
+  },
+  "resolutions":{
+    "angular":"~1.6.x"
+  }
+}
