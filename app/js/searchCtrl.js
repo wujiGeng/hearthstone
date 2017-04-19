@@ -7,6 +7,7 @@ $scope.savedCards = [];
 var shownCards = [];
 
 $scope.showingCards = [];
+$scope.loadingFlag = 1;
 
 
 var page = 1;
@@ -23,52 +24,63 @@ var page = 1;
  }
   
   $scope.search = function(name) {
+    $scope.loadingFlag=0;
+    console.log($scope.loadingFlag);
     Hearthstone.CardSearch.query({name:name},function(data){    
     rawCards = data;
     shownCards = Hearthstone.Filter(rawCards); 
     $scope.savedCards = shownCards;
     $scope.showingCards = shownCards;
+    $scope.loadingFlag=1;
+    console.log($scope.loadingFlag);
    });
  }
  
  $scope.classSearch = function(classes){
+  $scope.loadingFlag=0;
   Hearthstone.CardClass.query({class:classes},function(data) {
     rawCards = data;
-    //console.log(rawCards);
-    //$scope.filter(rawCards); 
+
     shownCards = Hearthstone.Filter(rawCards); 
     $scope.savedCards = shownCards;
     $scope.showingCards = shownCards;
     console.log(shownCards);
+    $scope.loadingFlag=1;
 /*    console.log($scope.showingCards);*/
 
   });
  }
   
  $scope.qualitySearch = function(quality){
+  $scope.loadingFlag=0;
   Hearthstone.CardQuality.query({quality:quality},function(data) {
     rawCards = data;
     shownCards = Hearthstone.Filter(rawCards); 
     $scope.savedCards = shownCards;
     $scope.showingCards = shownCards;
+    $scope.loadingFlag=1;
   });
  }
 
  $scope.raceSearch = function(race){
+  $scope.loadingFlag=0;
   Hearthstone.CardRace.query({race:race},function(data) {
     rawCards = data;
     shownCards = Hearthstone.Filter(rawCards); 
     $scope.savedCards = shownCards;
     $scope.showingCards = shownCards;
+    $scope.loadingFlag=1;
   });
  }
 
  $scope.typeSearch = function(type){
+  $scope.loadingFlag=0;
   Hearthstone.CardType.query({type:type},function(data) {
     rawCards = data;
     shownCards = Hearthstone.Filter(rawCards); 
     $scope.savedCards = shownCards;
     $scope.showingCards = shownCards;
+    $scope.loadingFlag=1;
   });
  }
    
