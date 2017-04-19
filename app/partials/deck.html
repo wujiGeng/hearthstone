@@ -98,11 +98,15 @@
 
 <div >
 
+
+
     <div class="col-md-8 cardView">
 
       <div class="col-md-1 turnpage"><img class="turnButton"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Media_Viewer_Icon_-_Next.svg/1000px-Media_Viewer_Icon_-_Next.svg.png" ng-click="last10cards()"></img></div>
+
       <div class="col-md-10 loading" ng-show="loadingFlag==0"><img class="loadingPic" src="https://img.gifamerica.com/cbd35c7bf64b6c7b6829e655374cc576_loading-ajax-loader-gif-transparent-background_1600-1600.gif" style="margin-top:100px;margin-left:300px; height:300px; width: 300px;"></div>
-      <div class="col-md-10" ng-show="loadingFlag==1">
+
+      <div class="col-md-10"  ng-show="loadingFlag==1">
       
       <ul class="caption-style-2" ng-repeat="card in showingCards track by $index|limitTo:10">
          <li>

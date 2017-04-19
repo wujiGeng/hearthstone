@@ -18,14 +18,20 @@
 
 <!-- colected card detail (picture) -->
 <div>
-      <div class="col-md-8 cardView">
+      <div class="col-md-8 cardView" >
       <div class="col-md-1 turnpage"><img class="turnButton"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Media_Viewer_Icon_-_Next.svg/1000px-Media_Viewer_Icon_-_Next.svg.png" ng-click="last10cards()"></img></div>
 
       <div class="col-md-10">
       <ul class="caption-style-2" ng-repeat="card in showingCards track by $index|limitTo:10">
          <li>
-        <div class="col-md-3 cardImagediv" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" jqyoui-draggable="{animate:true}">
+
+       <div class="col-md-3 cardImagediv" >
         <img  class="cardImage" ng-src="{{card.img}}">
+          <div class="caption">
+          <div class="blur">
+            <button class="col-md-12 btn btn-block detailButton" ng-click="deleteFromCollection(card.cardId)" ><h4 style="color:white"><label class="btn" for="check" style="width: 100px">Delete</label></h4></button>
+          </div>
+        </div>
         </div>
 
       </li>
@@ -38,6 +44,6 @@
 </div>
 
 <!-- delete bin -->
-<div data-drop="true" ng-drop-success="deleteFromCollection($data)">
+<!-- <div data-drop="true" ng-drop-success="deleteFromCollection($data)">
 	<img style="width: 100px; height: 100px" src="http://img3.imgtn.bdimg.com/it/u=1496813777,1882048858&fm=23&gp=0.jpg">
-</div>
+</div> -->

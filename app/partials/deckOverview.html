@@ -27,6 +27,7 @@
         				</div>
         			</div>
         		</div>
+            <div style="margin-top: 20px;"><a href="#!/deck"><button type="button" class="btn btn-success btn-block btn-default">Back to edit</button></a></div>
   				</div>
   			<div class="col-md-8 cardlist">
         <!-- title -->
@@ -34,7 +35,7 @@
       <!--     back to edit 【这里求加一个返回修改的按键！】-->
           <div></div>
            <!--  show cards in the deck -->
-            <div class="col-md-6 listDetail">
+            <div class="col-md-12 listDetail1">
   				    <div class="detailList" ng-repeat="card in selectedCards track by $index|limitTo:15">
 		            <div class="col-md-12" >
 		              <div class="col-md-1" style="margin: 0px;padding: 0px;color: white">{{card.cost}}</div>
@@ -43,19 +44,6 @@
 		            </div>
 		          </div>   
 		        </div>
-
-            <div class="col-md-6 listDetail">
-              <div class="detailList" ng-repeat="card in selectedCards track by $index|limitTo:15:15">
-                <div class="col-md-12" >
-                  <div class="col-md-1" style="margin: 0px;padding: 0px;color: white">{{card.cost}}</div>
-                  <div class="col-md-10" ><span style="color:white">{{card.name}}</span></div>
-                  
-                </div>
-              </div>
-              </div>
-            </div>
-
-
   			</div>
   		</div>
 
