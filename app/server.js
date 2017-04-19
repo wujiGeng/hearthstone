@@ -4,6 +4,7 @@ var app = express();
 app.use('/js', express.static(__dirname + '/js'));
 app.use('/css', express.static(__dirname + '/css'));
 app.use('/partials', express.static(__dirname + '/partials'));
+app.use('/bower_components', express.static(__dirname + '/bower_components'));
 
 
 app.all('/*', function(req, res, next) {
