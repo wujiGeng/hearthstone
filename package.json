@@ -10,9 +10,12 @@
     "bower": "^1.8.x"
   },
   "scripts": {
-    "postinstall": "bower install",
+    "postinstall": "./node_modules/bower/bin/bower install",
 
     "prestart": "npm install",
     "start": "http-server app/ -a 0.0.0.0 -p 8000"
-  }
+  },
+  "dependencies": {
+  "bower": "^1.8.x"
+}
 }
