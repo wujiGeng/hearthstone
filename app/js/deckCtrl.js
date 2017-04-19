@@ -22,11 +22,17 @@ $scope.heroType = "";
 
 var page = 1;
 
+$scope.selectedCardList1=[];
+$scope.selectedCardList2=[];
+
+$scope.loadingFlag=0;
+
   //get cards of selected class and neutural class
 $scope.classCards = function(){
    var classes = Hearthstone.GetHero();
    $scope.heroType = classes;
    //get cards from selected class
+   $scope.loadingFlag=0;
    Hearthstone.CardClass.query({class:classes},function(data) {
     rawCards = data;
     // //get cards from neutral cards
@@ -39,6 +45,7 @@ $scope.classCards = function(){
     $scope.savedCards = shownCards;
     $scope.showingCards = shownCards;
     console.log(shownCards);
+    $scope.loadingFlag=1;
 
     // });
    });
@@ -148,8 +155,8 @@ $scope.costFilter = function(cost,cards) {
     heroTypePic = Hearthstone.GetHeroPic($scope.heroType);
     return heroTypePic;
     console.log(heroTypePic);
-  }
 
+  }
 
 
 
