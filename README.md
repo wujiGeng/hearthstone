@@ -1,5 +1,5 @@
 # HearthstoneCards
--by Wuji Geng & Zhuoming Zhang
+  -by Wuji Geng & Zhuoming Zhang
 
 This is a website designed for hearthstone users, helping them to check all the cards in the game, as well as selecting their own card deck and favorite cards.
 
