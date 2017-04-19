@@ -3,15 +3,31 @@
   "private": true,
   "name": "hearthstone-cards",
   "description": "A project for dynamic web",
-  "repository": "https://github.com/wujiGeng/hearthstone",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wujiGeng/hearthstone.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "http-server": "^0.9.0",
-    "bower": "^1.8.x",
-    "express": "4.15.2"
+    "bower": "^1.8.x"
   },
   "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install",
     "prestart": "npm install",
-    "start": "node ./app/server.js"
-  }
+    "start": "node ./app/index.js"
+  },
+  "dependencies": {
+    "bower": "^1.8.x",
+    "express": "^4.15.2"
+  },
+  "engines": {
+    "node": "6.10.0"
+  },
+  "bugs": {
+    "url": "https://github.com/wujiGeng/hearthstone/issues"
+  },
+  "homepage": "https://github.com/wujiGeng/hearthstone#readme",
+  "main": "index.js",
+  "author": ""
 }
