@@ -1,6 +1,6 @@
 
 
-hearthStoneApp.factory('Hearthstone',function ($resource) {
+hearthStoneApp.factory('Hearthstone',function ($resource,$cookieStore) {
   
 
 //Get cards from API by different filters
@@ -68,7 +68,7 @@ this.Card = $resource('https://omgvamp-hearthstone-v1.p.mashape.com/cards/:name'
 
 // the cards showing
 //var showCards = [];
-
+var self = this;
 // the card deck
 var myDeck = [];
 
@@ -79,7 +79,95 @@ var heroType = 0;
 
 var progressBars = [];
 
+
 //get the cards working
+this.getDeckFromCookie = function(cookieValue) {
+  console.log(cookieValue);
+    for (var i = 0; i < cookieValue.length; i++) {
+        self.Card.query({name:cookieValue[i]},function(data){
+          self.AddCardToDeck(data[0]);
+      }, function(){
+        alert("Data retrival was faulty");
+        }
+      )
+    }
+  }
+
+  this.getFavFromCookie = function(cookieValue) {
+  console.log(cookieValue);
+    for (var i = 0; i < cookieValue.length; i++) {
+        self.Card.query({name:cookieValue[i]},function(data){
+          self.AddCardToCollection(data[0]);
+          console.log(222222);
+      }, function(){
+        alert("Data retrival was faulty");
+        console.log(11111);
+        }
+      )
+    }
+  }
+
+ /* this.getFavFromCookie = function(cookieValue) {
+    for (var i = 0; i < cookieValue.length; i++) {
+        self.Card.get({cardId:cookieValue[i]},function(data){
+          self.AddCardToDeck(data);
+      }, function(){
+        alert("Data retrival was faulty");
+        }
+      )
+    }
+  }*/
+
+    //Load from cookie if there is one or initialized to 0 the number of guest
+  if ($cookieStore.get('myCollection') != undefined) {
+    this.getFavFromCookie($cookieStore.get('myCollection'));
+        console.log(myCollection);
+  } else {
+    this.myCollection = [];
+
+  }
+
+  // Load from cookir if there is one or initialized to empty list the selected menu
+ if ($cookieStore.get('heroType') != undefined) {
+    heroType = $cookieStore.get('heroType');
+        console.log(heroType);
+  } else {
+    this.heroType = 0;
+
+  }
+
+
+
+  if ($cookieStore.get('myDeck') != undefined) {
+    this.getDeckFromCookie($cookieStore.get('myDeck'));
+/*    this.myDeck = [];*/
+  } else {
+    this.myDeck = [];
+  }
+
+  this.getMenuIds = function() {
+    var ids = []
+    for (var i = 0; i < myDeck.length; i++) {
+      ids.push(myDeck[i].cardId);
+    }
+    return ids;
+  } 
+  this.getFavIds = function() {
+    var ids = []
+    for (var i = 0; i < myCollection.length; i++) {
+      ids.push(myCollection[i].cardId);
+    }
+    return ids;
+  } 
+
+  this.updateCookies = function() {
+    $cookieStore.put('heroType', heroType);
+
+    $cookieStore.put('myDeck', this.getMenuIds());
+    $cookieStore.put('myCollection', this.getFavIds());
+
+  }
+
  this.Filter = function(rCards) {
 
   var filteredCards =[];
@@ -253,6 +341,7 @@ var progressBars = [];
 this.SetHero = function(type){
     heroType = type;
     myDeck = [];
+    this.updateCookies();
  }
 
  this.GetHero = function(){
@@ -297,7 +386,6 @@ this.SetHero = function(type){
  this.AddCardToDeck = function(card){
   var cardAlreadyInDeck = false;
   var sameCard = 0;
-  console.log(myDeck.length);
 
       if(myDeck.length>=30){
         cardAlreadyInDeck = true;
@@ -322,6 +410,7 @@ this.SetHero = function(type){
           myDeck.push(card);
           //this.updateCookies();       
       } 
+      this.updateCookies();
     //  this.SetProgress();   
  }
  
@@ -331,11 +420,11 @@ this.SetHero = function(type){
   for(var i=0; i<myDeck.length; i++){
             if(myDeck[i].cardId == id) {
               myDeck.splice(i,1);
-              //this.updateCookies();
+              this.updateCookies();
                 break;
             }
         }
-   //     this.SetProgress();
+
  }
  
   this.ShowProgress= function(flag){
@@ -440,9 +529,10 @@ this.SortCards = function(){
       if (myCollection.length === 0 || cardAlreadyInCol === false) {
           
           myCollection.push(card);
-          //this.updateCookies();       
+          this.updateCookies();       
       }  
       console.log(myCollection);
+      this.updateCookies();
  
 }
 
@@ -450,10 +540,11 @@ this.SortCards = function(){
     for(var i=0; i<myCollection.length; i++){
             if(myCollection[i].cardId == id) {
               myCollection.splice(i,1);
-              //this.updateCookies();
+              this.updateCookies();
                 break;
             }
         }
+
  }
  
 
