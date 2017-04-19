@@ -8,9 +8,14 @@ This is a website designed for hearthstone users, helping them to check all the 
 To visit our site, please go to the link --> 
 
 If the link is not working, please download the project, and do the following steps in your command line:
+
 1.change direction to this project file (by using cd)
+
 2.npm start
-3.open your browser and visit http://localhost:8000/#!/home
+
+3.paste the “bower-components” file under “app” file
+
+4.open your browser and visit http://localhost:8000/#!/home
 
 # Functions & Workflow
 
