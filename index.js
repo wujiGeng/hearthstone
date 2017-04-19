@@ -1,9 +1,9 @@
 var express = require('express');
 var app = express();
 
-app.use('/app/js', express.static(__dirname + '/js'));
-app.use('/app/css', express.static(__dirname + '/css'));
-app.use('/app/partials', express.static(__dirname + '/partials'));
+app.use('/app/js', express.static(__dirname + '/app/js'));
+app.use('/app/css', express.static(__dirname + '/app/css'));
+app.use('/app/partials', express.static(__dirname + '/app/partials'));
 
 
 app.all('/*', function(req, res, next) {
