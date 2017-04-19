@@ -13,9 +13,7 @@ If the link is not working, please download the project, and do the following st
 
 2.npm start
 
-3.paste the “bower-components” file under “app” file
-
-4.open your browser and visit http://localhost:8000/#!/home
+3.open your browser and visit http://localhost:8000/#!/home
 
 # Functions & Workflow
 
