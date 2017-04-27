@@ -26,3 +26,7 @@ If the link is not working, please download the project, and do the following st
 -In the deck page, users will first select a class of Hero, and then creat their own card deck. Sorted card deck information and bar chart are available.
 
 -Users may also view the cards in the deck or in the favorite list by clicking on the related button at the top bar.
+
+# Special Cases
+
+-If the pictures of cards are shown as a black backgroud without any card on it, or a transparent backgroud without cards, then it is because the rest API we use does not provide proper card picture for that card.
