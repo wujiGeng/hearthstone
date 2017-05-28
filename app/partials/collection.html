@@ -7,19 +7,18 @@
 
 <!-- input and search block -->
 <link href="css/styles.css" rel="stylesheet">
-<link href="css/clear.css" rel="stylesheet">
+<!-- <link href="css/clear.css" rel="stylesheet"> -->
 
 <!-- top bar -->
 <ng-include src="'partials/topbar.html'" ng-controller="MainCtrl"></ng-include>
 
-<!-- colection title 【这句话看不见了！！！！】 -->
 <div>My Collections</div>
 <div></div>
 
 <!-- colected card detail (picture) -->
 <div>
       <div class="col-md-8 cardView" >
-      <div class="col-md-1 turnpage"><img class="turnButton"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Media_Viewer_Icon_-_Next.svg/1000px-Media_Viewer_Icon_-_Next.svg.png" ng-click="last10cards()"></img></div>
+      <div class="col-md-1 turnpage"><img class="turnButton" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Media_Viewer_Icon_-_Next.svg/1000px-Media_Viewer_Icon_-_Next.svg.png" ng-click="last10cards()"></img></div>
 
       <div class="col-md-10">
       <ul class="caption-style-2" ng-repeat="card in showingCards track by $index|limitTo:10">
@@ -29,7 +28,7 @@
         <img  class="cardImage" ng-src="{{card.img}}">
           <div class="caption">
           <div class="blur">
-            <button class="col-md-12 btn btn-block detailButton" ng-click="deleteFromCollection(card.cardId)" ><h4 style="color:white"><label class="btn" for="check" style="width: 100px">Delete</label></h4></button>
+            <button class="col-md-12 btn btn-block favCard" ng-click="deleteFromCollection(card.cardId)" ><h4 style="color:white"><label for="check" style="width: 100px">Delete</label></h4></button>
           </div>
         </div>
         </div>
