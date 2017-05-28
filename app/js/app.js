@@ -1,9 +1,17 @@
 
-var hearthStoneApp = angular.module('hearthStone', ['ngRoute','ngResource','ngCookies']);
+var hearthStoneApp = angular.module('hearthStone', ['ngRoute','ngResource','ngCookies','firebase']);
 
 hearthStoneApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
+      when('/login', {
+      templateUrl: 'partials/login.html',
+      controller: 'LoginCtrl'
+      }).
+	  when('/regi', {
+	  templateUrl: 'partials/regi.html',
+      controller: 'RegiCtrl'
+      }).
       when('/home', {
         templateUrl: 'partials/home.html',
       }).
@@ -33,6 +41,6 @@ hearthStoneApp.config(['$routeProvider',
       }). 
       
       otherwise({
-        redirectTo: '/home'
+        redirectTo: '/login'
       });
   }]);

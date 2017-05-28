@@ -79,6 +79,15 @@ var heroType = 0;
 
 var progressBars = [];
 
+//login name
+var userName = "";
+this.setUsername = function(loginName){
+ userName = loginName;
+}
+this.getUsername = function(){
+ return username;
+}
+
 
 //get the cards working
 this.getDeckFromCookie = function(cookieValue) {
@@ -127,7 +136,7 @@ this.getDeckFromCookie = function(cookieValue) {
 
   }
 
-  // Load from cookir if there is one or initialized to empty list the selected menu
+  // Load from cookie if there is one or initialized to empty list the selected menu
  if ($cookieStore.get('heroType') != undefined) {
     heroType = $cookieStore.get('heroType');
         console.log(heroType);
@@ -135,8 +144,6 @@ this.getDeckFromCookie = function(cookieValue) {
     this.heroType = 0;
 
   }
-
-
 
   if ($cookieStore.get('myDeck') != undefined) {
     this.getDeckFromCookie($cookieStore.get('myDeck'));
@@ -176,7 +183,10 @@ this.getDeckFromCookie = function(cookieValue) {
       rCards[j].type!="Enchantment"&&
       rCards[j].type!="Hero Power"&&
       rCards[j].cardId!="hexfrog"&&
-      rCards[j].cardSet!="Karazhan"&&
+      rCards[j].cardSet!="One Night in Karazhan"&&
+      rCards[j].cardSet!="Whispers of the Old Gods"&&
+      rCards[j].cardSet!="Mean Streets of Gadgetzan"&&
+
       rCards[j].cardSet!="Debug"&&
       rCards[j].cardSet!="Credits"&&
       rCards[j].cardSet!="Journey to Un'Goro"&&
@@ -372,10 +382,10 @@ this.SetHero = function(type){
     if(heroType=='Warlock'){
       link = "http://media.services.zam.com/v1/media/byName/hs/cards/enus/HERO_07.png"
     }
-    if(heroType=='Priest'){
+    if(heroType=='Mage'){
       link = "http://media.services.zam.com/v1/media/byName/hs/cards/enus/HERO_08.png"
     }
-    if(heroType=='Mage'){
+    if(heroType=='Priest'){
       link = "http://media.services.zam.com/v1/media/byName/hs/cards/enus/HERO_09.png"
     }
     console.log(link);

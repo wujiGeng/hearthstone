@@ -10,9 +10,23 @@ $scope.showingCards = [];
 
 $scope.loadingFlag=1;
 
-
 var page = 1;
 
+ $scope.loadingFlag=0; 
+
+  Hearthstone.CardClass.query({class:'Mage'},function(data) {
+    rawCards = data;
+    //console.log(rawCards);
+    //$scope.filter(rawCards); 
+    shownCards = Hearthstone.Filter(rawCards); 
+    $scope.savedCards = shownCards;
+    $scope.showingCards = shownCards;
+    console.log(shownCards);
+$scope.loadingFlag=1;
+
+/*    console.log($scope.showingCards);*/
+
+  });
 
   $scope.functionChoose = function(type){
     $scope.functionFlag=0;
@@ -168,6 +182,8 @@ $scope.showDetail = function(id){
 
       Hearthstone.AddCardToCollection(card);
     }
+
+
  
 
 });
