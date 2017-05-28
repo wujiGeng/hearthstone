@@ -1,9 +1,9 @@
-#sideBar1{ 
+#sideBar{ 
   display:block;
   width:150px;
   background-color: #4A4A4A;
   background-size: 100%;
-  margin-bottom: 0;
+  margin: 0;
   height: 570px;
 
 }
@@ -20,7 +20,7 @@ width:135px;
 text-align:center;
 padding: 40px 10px 40px 0px;
 text-decoration:none;
-text-transform:uppercase;
+/*text-transform:uppercase;*/
 }
 
 li.sideBar  a:hover,a:active
@@ -29,7 +29,7 @@ li.sideBar  a:hover,a:active
   background-color:#FFCD38;
 /*background-color:#FFCD38;*/
 text-decoration:none;
-text-transform:uppercase;
+/*text-transform:uppercase;*/
 }
 
 
@@ -57,4 +57,46 @@ li.sideBar  a:hover span {
 li.sideBar  a:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+
+.classBarText{
+
+  color:white;
+}
+
+
+.classBarBack{ 
+
+  width:120px;
+  background-color: grey;
+  background-size: 100%;
+  margin-bottom: 0;
+  height: 570px;
+
+}
+
+.classBarBack li a:hover,a:active
+{
+  color:black;
+  width:105px;
+  
+background-color:#FFCD38;
+text-decoration:none;
+
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+
+  opacity: 1;
+  top: 8px;
+
+  transition: 0.5s;
+}
+
+.classText
+{
+  color:white;
+  height: 80px;
+  padding-top:20px;
 }

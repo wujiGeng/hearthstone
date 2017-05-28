@@ -19,6 +19,95 @@ body,div,ul,li,a{padding:0; margin:0; list-style-type:none;}
 }*/
 
 
+.firstBackground{
+    background-image: url("http://i.imgur.com/0h5hoUL.png");
+    background-size:1400px;
+    max-width:1400px;
+    width:1400px;
+    width:expression_r(document.body.clientWidth>1400?"1400":"auto");
+    overflow:hidden;
+    background-repeat:no-repeat;
+    height: 650px;
+
+}
+
+.Background{
+    background-image: url("https://pbs.twimg.com/media/C5xalSAVUAAOZzg.jpg");
+    background-size:1400px;
+    max-width:1400px;
+    width:1400px;
+    width:expression_r(document.body.clientWidth>1400?"1400":"auto");
+    overflow:hidden;
+    background-repeat:no-repeat;
+    height: 650px;
+
+}
+
+.selectFunctionButton{
+  width:400px; 
+}
+
+.chooseHeroTitle{
+  height:150px;
+  width: 1360px;
+  background-color: black;
+  opacity: 0.9;
+
+}
+
+.hero{
+    position:relative;
+    right:50px;
+    width:200px;
+    height:200px;
+
+    padding:0px;
+
+    overflow:hidden;
+    border-radius:80%;
+}
+
+.hero img{
+    position: center;
+      margin-left:6px;
+    padding:0px;
+     height:190px;
+    width:190px;
+    height:auto;
+}
+
+.firstRow{
+    height:200px;
+    width:1360px;
+
+}
+.secondRow{
+    height:200px;
+    width:1360px;
+
+}
+
+
+.setHeroTitle{
+    font-weight: bold;
+     font-size: 100px;
+     text-align: center;
+    color: white;
+}
+
+/*注册页面格式*/
+
+.regiArea{
+  padding:20px;
+  background-color: white;
+  opacity: 0.7;
+}
+
+
+
+
+
+
 
 /*顶！d=====(￣▽￣*)b栏的样式*/
 #topBar{ 
@@ -55,19 +144,19 @@ width:120px;
 text-align:center;
 padding:6px;
 text-decoration:none;
-text-transform:uppercase;
+
 }
 li.topBar  a:hover,a:active
 {
   color:white;
 background-color:black;
 text-decoration:none;
-text-transform:uppercase;
+
 }
 
 
 /*sideBar侧边栏的样式*/
-#sideBar{ 
+/*#sideBar{ 
   display:block;
   width:150px;
   background-color: #4A4A4A;
@@ -124,11 +213,11 @@ text-transform:uppercase;
 #sideBar li a:hover span:after {
   opacity: 1;
   right: 0;
-}
+}*/
 /*sideBar二级菜单的样式*/
 
 
-.classBarText{
+/*.classBarText{
 
   color:white;
 }
@@ -166,7 +255,7 @@ text-transform:uppercase;
 
   transition: 0.5s;
 }
-
+*/
 
 
 
@@ -478,7 +567,7 @@ text-transform:uppercase;
     position:relative;
     right:50px;
     width:300px;
-    height:500px;
+    height:300px;
 
     padding:0px;
 
@@ -516,3 +605,97 @@ text-transform:uppercase;
   padding: 0px 0px 0px 3px; 
   height: 400px
 }
+
+
+.firstBackground{
+    background-image: url("http://i.imgur.com/0h5hoUL.png");
+    background-size:1400px;
+    max-width:1400px;
+    width:1400px;
+    width:expression_r(document.body.clientWidth>1400?"1400":"auto");
+    overflow:hidden;
+    background-repeat:no-repeat;
+    height: 650px;
+
+}
+
+.Background{
+    background-image: url("https://pbs.twimg.com/media/C5xalSAVUAAOZzg.jpg");
+    background-size:1400px;
+    max-width:1400px;
+    width:1400px;
+    width:expression_r(document.body.clientWidth>1400?"1400":"auto");
+    overflow:hidden;
+    background-repeat:no-repeat;
+    height: 650px;
+
+
+}
+
+.selectFunctionButton{
+  width:400px; 
+}
+
+.chooseHeroTitle{
+  height:150px;
+  width: 1360px;
+  background-color: black;
+  opacity: 0.9;
+
+}
+
+.hero{
+    position:relative;
+    right:50px;
+    width:200px;
+    height:200px;
+
+    padding:0px;
+
+    overflow:hidden;
+    border-radius:80%;
+}
+
+.hero img{
+    position: center;
+      margin-left:6px;
+    padding:0px;
+     height:190px;
+    width:190px;
+    height:auto;
+}
+
+.firstRow{
+    height:200px;
+    width:1360px;
+
+}
+.secondRow{
+    height:200px;
+    width:1360px;
+
+}
+
+
+.setHeroTitle{
+    font-weight: bold;
+
+     font-size: 100px;
+     text-align: center;
+    color: white;
+}
+
+.favCard
+{
+  opacity: 0.7;
+  margin-left: 0px;
+  padding: 0px;
+  background-color: transparent;
+  height: 50px;
+
+}
+
+
+
+
+
