@@ -5,7 +5,7 @@ This is a website designed for hearthstone users, helping them to check all the 
 
 # Visit our site
 
-To visit our site, please go to the link --> https://blooming-reef-90213.herokuapp.com/
+To visit our site, please go to the link --> https://pacific-waters-57643.herokuapp.com/
 
 If the link is not working, please download the project, and do the following steps in your command line:
 
@@ -13,7 +13,7 @@ If the link is not working, please download the project, and do the following st
 
 2.npm start
 
-3.open your browser and visit http://localhost:8000/#!/home
+3.open your browser and visit http://localhost:8000/
 
 # Functions & Workflow
 
@@ -27,6 +27,10 @@ If the link is not working, please download the project, and do the following st
 
 -Users may also view the cards in the deck or in the favorite list by clicking on the related button at the top bar.
 
-# Special Cases
+# Notice
 
--If the pictures of cards are shown as a black backgroud without any card on it, or a transparent backgroud without cards, then it is because the rest API we use does not provide proper card picture for that card.
+-The deck and favorites are saved in local cookies, not in the account.
+
+-In the "search for cards" page, buttons in the filters need to be clicked onto the exact number.
+
+-If the picture of a card is shown as a black block, or a transparent block, then it is probably because the rest API we use does not provide proper card picture for that card.
