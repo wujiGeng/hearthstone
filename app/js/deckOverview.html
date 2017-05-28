@@ -1,0 +1,52 @@
+<div class = "Background">
+<!-- 	<link href="css/styles.css" rel="stylesheet">
+	<link href="css/clear.css" rel="stylesheet"> -->
+  	<ng-include src="'partials/topbar.html'"></ng-include>
+
+  	<div class="col-md-12">
+  		<div class="col-md-1 detailBlock"></div>
+  		<div class="col-md-1 detailBlock"></div>
+  		<div class="col-md-9 blackBack">
+  			<div class="col-md-4 heroProgress">
+     <!--    hero picture -->
+          <div style="height:360px;padding-left:20px;">
+  				  <div class="heroPicInO">
+              <img src="{{getHeroPic()}}">
+            </div>
+          </div>
+       <!--    process bar -->
+  				<div class="progressbarInO">
+  				<div class="col-md-1 curveText">0 1 2 3 4 5 6 7+</div>
+			        <div class="col-md-10 curveGraph">
+			          
+			            <div ng-repeat="bar in progressBars track by $index">
+				              	<div class="progress">
+              							<div class="progress-bar progress-bar-success" id="progressBar" role="progressbar" aria-valuenow="0.4" aria-valuemin="0" aria-valuemax="1" ng-style="{'width':'{{bar}}'}">
+              							</div>
+           						</div>
+        				</div>
+        			</div>
+        		</div>
+            <div style="margin-top: 20px;"><a href="#!/deck"><button type="button" class="btn btn-success btn-block btn-default">Back to edit</button></a></div>
+  				</div>
+  			<div class="col-md-8 cardlist">
+        <!-- title -->
+          <div><h1 class="col-md-12 deckTitle">Deck Detail</h1></div>
+      <!--     back to edit 【这里求加一个返回修改的按键！】-->
+          <div></div>
+           <!--  show cards in the deck -->
+            <div class="col-md-12 listDetail1">
+  				    <div class="detailList" ng-repeat="card in selectedCards track by $index|limitTo:15">
+		            <div class="col-md-12" >
+		              <div class="col-md-1" style="margin: 0px;padding: 0px;color: white">{{card.cost}}</div>
+		              <div class="col-md-10" ><span style="color:white">{{card.name}}</span></div>
+		              
+		            </div>
+		          </div>   
+		        </div>
+  			</div>
+  		</div>
+
+  		<div class="col-md-1 detailBlock"></div>
+  	</div>
+</div>

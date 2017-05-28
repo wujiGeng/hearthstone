@@ -1,0 +1,51 @@
+<!-- <link href="css/styles.css" rel="stylesheet"> -->
+
+<!--   show the cards to be selected -->
+
+	<div class="col-md-4" id="cardWaitingList">
+
+        <div class="col-md-12 heroName"><h1>{{heroType}}</h1></div>
+
+        <div class="col-md-12 listDetail">
+
+          <div class="" style="height: 10px"></div>
+
+          <div class="detailList" ng-repeat="card in selectedCards track by $index">
+            <div class="col-md-12" >
+            <div class="cardList" ng-click="cardDetail(card.cardId)">
+              <div class="col-md-1" style="margin: 0px;padding: 0px;color: white">{{card.cost}}</div>
+              <div class="col-md-10" ><span style="color:white">{{card.name}}</span></div>
+              <div class="col-md-1 deleteButton" style="margin: 0px;padding: 0px;color: white"><span ng-click="removeFromList(card.cardId)">x</span></div>
+            </div>
+
+          </div>
+            
+        </div>
+
+        </div>
+        <!-- process bar -->
+        <div class="col-md-1 curveText">0 1 2 3 4 5 6 7+</div>
+        <div class="col-md-10 curveGraph">
+          
+            <div ng-repeat="bar in progressBars track by $index">
+            <div class="progress" ng-if="progressFlag==0">
+              <div class="progress-bar progress-bar-success" id="progressBar" role="progressbar" aria-valuenow="0.4" aria-valuemin="0" aria-valuemax="1" ng-style="{'width':'{{bar}}'}">
+              </div>
+            </div>
+             <div class="progress" ng-if="progressFlag==1">
+              <div class="progress-bar progress-bar-success" id="progressBar" role="progressbar" aria-valuenow="0.4" aria-valuemin="0" aria-valuemax="1" ng-style="{'width':'{{bar}}'}">
+              </div>
+            </div>
+
+
+
+        </div>
+        </div>
+        <div class="col-md-12" style="margin-top: 5px;"><a href="#!/deckOverview"><button type="button" class="btn btn-success btn-block btn-default">Done!</button></a></div>
+       <!--  confirm and see my deck 【这里求加一个确认然后去mydeck的按键！】 -->
+          <div>
+          
+          </div>
+
+
+        </div>

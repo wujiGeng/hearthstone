@@ -1,0 +1,40 @@
+<!-- 注意：有个BUG，点选卡牌以后选其他英雄依然能进到这个页面还能选卡 -->
+
+<!-- <link href="css/clear.css" rel="stylesheet"> -->
+<div class="Background" style="width: 1360">
+<ng-include src="'partials/topbar.html'"></ng-include>
+<div class="col-md-12 chooseHeroTitle"><p class="setHeroTitle">Choose a Hero</p></div>
+<div class="chooseHero">
+	<div class="col-md-12 firstRow">
+		<div class="hero col-md-1"></div>
+		<div class="hero col-md-2"><a ng-href="#!/deck" ng-click="setHero('Warrior')"><img class="heroPic" src="http://media.services.zam.com/v1/media/byName/hs/cards/enus/HERO_01.png"><h3>Warrior</h3></a>
+		</div>
+		<div class="hero col-md-2">
+		<a  ng-href="#!/deck" ng-click="setHero('Priest')"><img class="heroPic" src="http://media.services.zam.com/v1/media/byName/hs/cards/enus/HERO_09.png">
+		<h3>Priest</h3></a></div>
+		<div class="hero col-md-2"><a  ng-href="#!/deck" ng-click="setHero('Rogue')"><img class="heroPic" src="http://media.services.zam.com/v1/media/byName/hs/cards/enus/HERO_03.png">
+		<h3>Rogue</h3></a></div>
+		<div class="hero col-md-2"><a  ng-href="#!/deck" ng-click="setHero('Paladin')"><img class="heroPic" src="http://media.services.zam.com/v1/media/byName/hs/cards/enus/HERO_04.png">
+		<h3>Paladin</h3></a></div>
+		<div class="hero col-md-2"><a  ng-href="#!/deck" ng-click="setHero('Hunter')"><img class="heroPic" src="http://media.services.zam.com/v1/media/byName/hs/cards/enus/HERO_05.png">
+		<h3>Hunter</h3></a></div>
+		<div class="hero col-md-1"></div>
+	</div>
+	<div class="col-md-12 secondRow">
+		<div class="col-md-2 hero" style="width: 300px"></div>
+		<div class="col-md-2 hero"><a  ng-href="#!/deck" ng-click="setHero('Druid')"><img class="heroPic" src="http://media.services.zam.com/v1/media/byName/hs/cards/enus/HERO_06.png">
+		<h3>Druid</h3></a></div>
+		<div class="col-md-2 hero"><a  ng-href="#!/deck" ng-click="setHero('Warlock')"><img class="heroPic" src="http://media.services.zam.com/v1/media/byName/hs/cards/enus/HERO_07.png">
+		<h3>Warlock</h3></a></div>
+		<div class="col-md-2 hero"><a  ng-href="#!/deck" ng-click="setHero('Mage')"><img class="heroPic" src="http://media.services.zam.com/v1/media/byName/hs/cards/enus/HERO_08.png">
+		<h3>Mage</h3></a></div>
+		<div class="col-md-2 hero"><a  ng-href="#!/deck" ng-click="setHero('Shaman')"><img class="heroPic" src="http://media.services.zam.com/v1/media/byName/hs/cards/enus/HERO_02.png">
+		<h3>Shaman</h3></a></div>
+		<div class="col-md-2 hero"></div>
+	</div>
+</div>
+</div>
+
+
+
+
